@@ -1,15 +1,14 @@
 import React from "react";
-import Header from "./components/Header";
 import Panel from "./components/Card";
-
+import { Box } from "@mui/system";
+import Header from "./components/Header";
 
 function App() {
   return (
-    <div>
-    <Header />
-    <Panel />
-    </div>
-    
+    <Box>
+      <Header />
+      <Panel />
+    </Box>
   );
 }
 

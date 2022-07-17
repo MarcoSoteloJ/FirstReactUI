@@ -15,17 +15,20 @@ function Panel() {
   return (
     <Box
       sx={{
-        display: "flex",
-        justifyContent: "center",
+        position: "absolute",
+        marginLeft: "30%",
+        marginRight: "30%",
+        left: 0,
+        right: 0,
+        top: "40%",
+        textAlign: "center",
+        zIndex: "tooltip",
       }}
     >
-      <Card
-        sx={{
-          width: "40%",
-        }}
-      >
+      {/* Card Body */}
+      <Card>
         <CardContent>
-          <Box padding="30px 0 0">
+          <Box padding="60px 0">
             <CardSlider />
           </Box>
         </CardContent>
@@ -33,13 +36,20 @@ function Panel() {
         <Divider />
 
         <CardContent>
+          {/* Card Footer */}
+
           <Box
             sx={{
               padding: "40px",
             }}
           >
-            <Stack direction="row" justifyContent="space-evenly" spacing={30}>
-              <Stack spacing={1}>
+            <Stack
+              direction="row"
+              alignItems="center"
+              justifyContent="space-evenly"
+              spacing={20}
+            >
+              <Stack spacing={2} alignItems="flex-start">
                 <Typography>
                   <img src={Palomita} alt="palomita check" />
                   Unlimited Websites
@@ -54,7 +64,9 @@ function Panel() {
                 </Typography>
               </Stack>
 
-              <Fab variant="extended">Start my trial</Fab>
+              <Fab variant="extended" size="string" color="primary">
+                <Typography variant="body1">Start my trial</Typography>
+              </Fab>
             </Stack>
           </Box>
         </CardContent>

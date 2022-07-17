@@ -1,5 +1,5 @@
 import { createTheme } from "@mui/material";
-import { cyan } from "@mui/material/colors";
+import { cyan, orange } from "@mui/material/colors";
 
 const theme = createTheme({
   typography: {
@@ -10,6 +10,10 @@ const theme = createTheme({
   palette: {
     primary: {
       main: cyan[500],
+    },
+    secondary: {
+      main: orange[100],
+      contrastText: orange[900],
     },
   },
 });
